@@ -22,7 +22,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/HarshwardhanBhaskar/india-runs-challenge"
 sandbox_link: "https://huggingface.co/spaces/HarshwardhanBhaskar/redrob-ranker"
-reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./hb_technologies.csv"
 
 # ============================================================================
 # Compute environment
