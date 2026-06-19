@@ -37,7 +37,7 @@ graph TD
     B -- Disqualified (Score: -1.0) --> C[Discarded / Logged]
     B -- Valid Candidate Profile --> D[Feature Extraction Engine]
     
-    subgraph Multi-Tier Scoring System (Base: 100 points)
+    subgraph "Multi-Tier Scoring System (Base: 100 points)"
         D --> E1[Experience Match: 20 pts]
         D --> E2[Title Relevance: 35 pts]
         D --> E3[Deep Skill Parsing: 25 pts]
