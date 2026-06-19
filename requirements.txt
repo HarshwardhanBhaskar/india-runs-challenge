@@ -1,0 +1,2 @@
+# No external dependencies required.
+# Built entirely using Python 3.12 standard library (json, csv, re, sys, argparse, pathlib).

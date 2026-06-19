@@ -1,0 +1,63 @@
+# Redrob Hackathon — Submission Metadata
+#
+# Filled in for team HB Technologies
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "HB Technologies"
+
+primary_contact:
+  name: "Harshwardhan Bhaskar"
+  email: "harshwardhan.bhaskar@gmail.com"   # TODO: Modify if necessary
+  phone: "+91-XXXXXXXXXX"                  # TODO: Modify with registered phone number
+
+team_members:
+  - name: "Harshwardhan Bhaskar"
+    email: "harshwardhan.bhaskar@gmail.com"
+    role: "AI Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/HarshwardhanBhaskar/india-runs-challenge"
+sandbox_link: "https://huggingface.co/spaces/hwbha/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+ai_usage_summary: |
+  Used Gemini via the Antigravity AI Agent for collaborative architecture design, code creation, honeypot scanning, and debugging. No candidate data was shared with external API endpoints during execution.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  A multi-tier candidate discovery pipeline with programmatic honeypot filters (rejecting expert-zero and company-year mismatches). Computes composite scores across five major vectors: Title relevance (35%), Experience target match (5-9 years, 20%), Deep skill scoring including endorsements/duration (25%), Location/relocation fit (10%), and Recruiter activity/engagement metrics (10%). Incorporates explicit tie-breakers (ascending candidate_id) and generates customized, hallucination-free summaries of qualifications.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

@@ -1,0 +1,28 @@
+# Large candidate dataset (Do NOT push to GitHub)
+candidates.jsonl
+candidates.jsonl.gz
+sample_candidates.json
+
+# Temporary/extracted folders
+extracted/
+extracted_pages/
+__MACOSX/
+.vscode/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Local scratch/test scripts
+test_*.py
+search_*.py
+count_*.py
+check_*.py
+
+# Presentation files and generation scripts (not part of the ranking code)
+build_submission_pdf.py
+create_presentation.py
+convert_pptx_to_pdf.py
+*.pdf
+*.pptx
+
