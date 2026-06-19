@@ -21,7 +21,7 @@ team_members:
 # Code and reproducibility
 # ============================================================================
 github_repo: "https://github.com/HarshwardhanBhaskar/india-runs-challenge"
-sandbox_link: "https://huggingface.co/spaces/hwbha/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/HarshwardhanBhaskar/redrob-ranker"
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 # ============================================================================
