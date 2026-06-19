@@ -4,7 +4,7 @@ This repository contains the candidate ranking submission by **Team HB Technolog
 
 ## Project Description
 
-The solution is an offline, high-throughput, and deterministic candidate screening pipeline designed to rank a 100,000-candidate pool for a **Senior AI Engineer (Founding Team)** role in **under 50 seconds** on a single CPU core. 
+The solution is an offline, high-throughput, and deterministic candidate screening pipeline designed to rank a 100,000-candidate pool for an **AI Engineer (Founding Team)** role in **under 50 seconds** on a single CPU core. 
 
 Instead of relying on heavy black-box LLM APIs (which violate latency, offline, and cost constraints), it employs a multi-tier heuristic model matching candidates across five key vectors:
 1. **Title Relevance (35%):** Heavy weight on ML/AI engineering experience, with down-weighting for non-tech roles.
