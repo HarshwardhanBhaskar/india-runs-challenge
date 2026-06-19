@@ -25,4 +25,7 @@ create_presentation.py
 convert_pptx_to_pdf.py
 *.pdf
 *.pptx
+!HB_Technologies_Submission.pdf
+!HB_Technologies_Submission.pptx
+
 
