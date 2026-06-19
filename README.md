@@ -33,38 +33,38 @@ Our solution is structured as a multi-stage deterministic pipeline. The logic is
 
 ```mermaid
 graph TD
-    A[Raw Candidate Stream: candidates.jsonl] --> B{🛡️ Honeypot Shield}
-    B -- Disqualified (Score: -1.0) --> C[Discarded / Logged]
-    B -- Valid Candidate Profile --> D[Feature Extraction Engine]
+    A["Raw Candidate Stream: candidates.jsonl"] --> B{"🛡️ Honeypot Shield"}
+    B -- "Disqualified (Score: -1.0)" --> C["Discarded / Logged"]
+    B -- "Valid Candidate Profile" --> D["Feature Extraction Engine"]
     
     subgraph "Multi-Tier Scoring System (Base: 100 points)"
-        D --> E1[Experience Match: 20 pts]
-        D --> E2[Title Relevance: 35 pts]
-        D --> E3[Deep Skill Parsing: 25 pts]
-        D --> E4[Company Type Match: 10 pts]
-        D --> E5[Geographic Alignment: 5 pts]
-        D --> E6[Recruiter Signals & Notice: 10 pts]
+        D --> E1["Experience Match: 20 pts"]
+        D --> E2["Title Relevance: 35 pts"]
+        D --> E3["Deep Skill Parsing: 25 pts"]
+        D --> E4["Company Type Match: 10 pts"]
+        D --> E5["Geographic Alignment: 5 pts"]
+        D --> E6["Recruiter Signals & Notice: 10 pts"]
     end
     
-    E1 & E2 & E3 & E4 & E5 & E6 --> F[Compute Composite Base Score]
-    F --> G[Sanity Validation Checks]
-    G -- Mismatch Penalty (-2 pts each) --> H[Adjusted Composite Score]
-    G -- Passes Checks --> H
+    E1 & E2 & E3 & E4 & E5 & E6 --> F["Compute Composite Base Score"]
+    F --> G["Sanity Validation Checks"]
+    G -- "Mismatch Penalty (-2 pts each)" --> H["Adjusted Composite Score"]
+    G -- "Passes Checks" --> H
     
-    H --> I[Normalize Score [0.0, 1.0]]
-    I --> J{Service Firm Filter}
-    J -- Service-firm-only Career --> K[-20% Final Score Penalty]
-    J -- Product/Startup Exp --> L[Final Normalized Score]
+    H --> I["Normalize Score [0.0, 1.0]"]
+    I --> J{"Service Firm Filter"}
+    J -- "Service-firm-only Career" --> K["-20% Final Score Penalty"]
+    J -- "Product/Startup Exp" --> L["Final Normalized Score"]
     K --> L
     
-    L --> M[Deterministic Sort & Tie-Break]
-    M --> M1[Score Descending (4 Decimals)]
-    M --> M2[Candidate ID Ascending]
+    L --> M["Deterministic Sort & Tie-Break"]
+    M --> M1["Score Descending (4 Decimals)"]
+    M --> M2["Candidate ID Ascending"]
     
-    L --> N[Fact-Based Reasoning Generator]
+    L --> N["Fact-Based Reasoning Generator"]
     
-    M2 & N --> O[Generate Top 100 Ranked Output]
-    O --> P[hb_technologies.csv / hb_technologies.xlsx]
+    M2 & N --> O["Generate Top 100 Ranked Output"]
+    O --> P["hb_technologies.csv / hb_technologies.xlsx"]
 ```
 
 ---
